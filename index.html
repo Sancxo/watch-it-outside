@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>🎬 Watch it outside - Boston edition</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-lg-5 px-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><strong>Watch it outside</strong> <br /><small>Boston edition</small></a>
+                <button class="navbar-toggler p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-0">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#movies">Movies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="carousel-section">
+        <div id="movieCarousel" class="carousel slide vw-50" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" id="carousel-1">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-gradient bg-opacity-50">
+                    <div>
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item" id="carousel-2">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-gradient bg-opacity-50">
+                    <div>
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item" id="carousel-3">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-gradient bg-opacity-50">
+                    <div>
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nulla quidem ipsum officiis maiores ut impedit odio accusamus expedita, cupiditate, amet fuga exercitationem? Libero voluptas veniam autem laboriosam voluptatem molestiae.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim laboriosam minima, consequatur dolore atque consequuntur in, molestias hic magni veniam facilis minus distinctio temporibus, sapiente quibusdam error ipsum! Sit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque exercitationem minus modi excepturi quaerat in, enim, odit fuga eum ipsum porro similique vero soluta, adipisci suscipit magni fugiat tempore.</p>
+    </section>
+    
+    <footer class="bg-secondary text-white">
+        <div class="d-flex justify-content-around align-items-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.4325389354753!2d-71.07297368481018!3d42.354620379187224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3709e822b60bb%3A0xcbd77f0b5e16e701!2sPublic%20Garden!5e0!3m2!1sfr!2sfr!4v1635973110805!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link link-light" href=""><i class="bi bi-twitter"></i></a></li>
+                    <li class="nav-item"><a class="nav-link link-light" href=""><i class="bi bi-facebook"></i></a></li>
+                    <li class="nav-item"><a class="nav-link link-light" href=""><i class="bi bi-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

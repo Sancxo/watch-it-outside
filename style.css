@@ -1,0 +1,16 @@
+.carousel-section {
+    width: 66vw;
+    margin: auto;
+}
+#carousel-1 {
+    background: center / cover no-repeat url("./imgs/shadows-cassavetes.jpg");
+    height: 75vh;
+}
+#carousel-2 {
+    background: right / cover no-repeat url("./imgs/sunset-boulevard-wilder.jpg");
+    height: 75vh;
+}
+#carousel-3 {
+    background: center / cover no-repeat url("./imgs/meanstreets-scorcese.webp");
+    height: 75vh;
+}
