@@ -10,7 +10,7 @@
     <title>🎬 Watch it outside - Boston edition</title>
 </head>
 <body>
-    <header>
+    <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-lg-5 px-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><strong>Watch it outside</strong> <br /><small>Boston edition</small></a>
@@ -19,18 +19,29 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-0">
-                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#movies">Movies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#home" onclick="onClickNav(this)">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" onclick="onClickNav(this)">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#movies" onclick="onClickNav(this)">Movies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#news" onclick="onClickNav(this)">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#register" onclick="onClickNav(this)">Registration</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section class="carousel-section">
+    <section id="home" class="hero-img">
+        <img class="w-100" src="./imgs/american-graffiti-lucas.jpg" alt="Drive-in from American Graffiti by Georges Lucas">
+    </section>
+
+    
+    <section id="about">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nulla quidem ipsum officiis maiores ut impedit odio accusamus expedita, cupiditate, amet fuga exercitationem? Libero voluptas veniam autem laboriosam voluptatem molestiae.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim laboriosam minima, consequatur dolore atque consequuntur in, molestias hic magni veniam facilis minus distinctio temporibus, sapiente quibusdam error ipsum! Sit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque exercitationem minus modi excepturi quaerat in, enim, odit fuga eum ipsum porro similique vero soluta, adipisci suscipit magni fugiat tempore.</p>
+    </section>
+
+    <section id="movies" class="carousel-section">
         <div id="movieCarousel" class="carousel slide vw-50" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -74,10 +85,14 @@
           </div>
     </section>
 
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nulla quidem ipsum officiis maiores ut impedit odio accusamus expedita, cupiditate, amet fuga exercitationem? Libero voluptas veniam autem laboriosam voluptatem molestiae.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim laboriosam minima, consequatur dolore atque consequuntur in, molestias hic magni veniam facilis minus distinctio temporibus, sapiente quibusdam error ipsum! Sit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque exercitationem minus modi excepturi quaerat in, enim, odit fuga eum ipsum porro similique vero soluta, adipisci suscipit magni fugiat tempore.</p>
+    <section id="news"></section>
+    <section id="register">
+        <form action="./contact-form.js" method="post">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+        </form>
     </section>
     
     <footer class="bg-secondary text-white">
@@ -94,5 +109,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

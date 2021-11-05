@@ -1,3 +1,14 @@
+body, html {
+    height: 100%;
+}
+.hero-img {
+    background: 50% 63% / cover no-repeat url("./imgs/american-graffiti-lucas.jpg");
+    /* max-width: 100%; */
+    height: 50%;
+}
+.hero-img img {
+    display: none;
+}
 .carousel-section {
     width: 66vw;
     margin: auto;
@@ -14,3 +25,14 @@
     background: center / cover no-repeat url("./imgs/meanstreets-scorcese.webp");
     height: 75vh;
 }
+
+ /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+ @media only screen and (max-device-width: 1366px) {
+    .hero-img {
+        background: none;
+        height: auto;
+    }
+    .hero-img img {
+        display: block;
+    }
+} 
