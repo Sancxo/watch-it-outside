@@ -22,7 +22,9 @@ const activeLinkOnScroll = () => {
         if (scrollPos >= footer.offsetTop) navLinks[--navLinks.length].classList.add('active');
     })
 }
+heroImg.style.marginTop = `${header.offsetHeight}px`; // Hero img margin
+
+// Event listeners :
 window.onload = () => activeLinkOnScroll();
 document.addEventListener('scroll', () => activeLinkOnScroll());
 navLinks.forEach(link => link.addEventListener('click', e => goTo(e)))
-heroImg.style.marginTop = `${header.offsetHeight}px`; // Hero img margin
