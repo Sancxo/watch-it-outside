@@ -4,14 +4,17 @@ const navLinks = document.querySelectorAll(".navbar .nav-link");
 const heroImg = document.querySelector('.hero-img');
 const footer = document.querySelector('footer');
 
-// Style functions :
-const goTo = e => {
+// Style :
+heroImg.style.marginTop = `${header.offsetHeight}px`; // Hero img margin
+
+// Navigation functions : 
+const goTo = e => { // we scroll smoothly to the section of the link we clicked
     e.preventDefault();
     console.log(e.target.hash);
     let elPos = document.querySelector(e.target.hash).offsetTop;
     window.scrollTo({top: elPos, behavior: "smooth"});
 }
-const activeLinkOnScroll = () => {
+const activeLinkOnScroll = () => { // when we scroll over a section, the link in the navbar becom active
     let scrollPos = window.scrollY + 450;
     navLinks.forEach(link => {
         let sectionHash = document.querySelector(link.hash);
@@ -22,7 +25,6 @@ const activeLinkOnScroll = () => {
         if (scrollPos >= footer.offsetTop) navLinks[--navLinks.length].classList.add('active');
     })
 }
-heroImg.style.marginTop = `${header.offsetHeight}px`; // Hero img margin
 
 // Event listeners :
 window.onload = () => activeLinkOnScroll();
