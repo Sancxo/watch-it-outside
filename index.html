@@ -34,7 +34,7 @@
         <img class="w-100" src="./imgs/american-graffiti-lucas.jpg" alt="Drive-in from American Graffiti by Georges Lucas">
     </section>
 
-    <main>
+    <main class="my-4">
         <section id="about">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nulla quidem ipsum officiis maiores ut impedit odio accusamus expedita, cupiditate, amet fuga exercitationem? Libero voluptas veniam autem laboriosam voluptatem molestiae.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit enim laboriosam minima, consequatur dolore atque consequuntur in, molestias hic magni veniam facilis minus distinctio temporibus, sapiente quibusdam error ipsum! Sit.</p>
@@ -86,11 +86,35 @@
         </section>
 
         <section id="news"></section>
-        <section id="register">
+        <section id="register" class="w-50 mx-auto mt-4">
             <form action="./contact-form.js" method="post">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
+                <div class="row">
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="text" class="form-control" id="name" placeholder="Truffaut">
+                        <label for="name" class="ms-2">Name</label>
+                    </div>
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="text" class="form-control" id="forename" placeholder="François">
+                        <label for="forename" class="ms-2">Forename</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Francois@Truffaut.com">
+                        <label for="floatingInput" class="ms-2">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="phone" class="form-control" id="phone" placeholder="451-451-4511">
+                        <label for="phone" class="ms-2">Phone number</label>
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave your message here" id="message"></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="text-center mt-2">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                    <input class="btn btn-dark" type="reset" value="Reset">
                 </div>
             </form>
         </section>

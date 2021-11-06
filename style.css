@@ -26,6 +26,10 @@ body, html {
     height: 75vh;
 }
 
+#message {
+    height: 200px;
+}
+
  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
  @media only screen and (max-device-width: 1366px) {
     .hero-img {
