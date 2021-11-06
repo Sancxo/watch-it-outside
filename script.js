@@ -1,21 +1,28 @@
-// HTML Elements
+// HTML Elements :
 const header = document.querySelector('header');
+const navLinks = document.querySelectorAll(".navbar .nav-link");
 const heroImg = document.querySelector('.hero-img');
+const footer = document.querySelector('footer');
 
-// State variables
-const navState = localStorage.getItem('navState') || '#home';
-
-// Style functions
-window.onload = () => {
-    const hash = window.location.hash || "#home";
-    const setLinkActive = (() => {document.querySelector(`a[href="${hash}"]`).classList.add("active")})();
-    localStorage.setItem('navState', hash);
-
+// Style functions :
+const goTo = e => {
+    e.preventDefault();
+    console.log(e.target.hash);
+    let elPos = document.querySelector(e.target.hash).offsetTop;
+    window.scrollTo({top: elPos, behavior: "smooth"});
 }
-function onClickNav (newActiveLink) {
-    const formerActiveLink = document.querySelector('a.active');
-    formerActiveLink ? formerActiveLink.classList.remove('active') : null ;
-    newActiveLink.classList.add('active');
-    localStorage.setItem('navState', newActiveLink.hash);
+const activeLinkOnScroll = () => {
+    let scrollPos = window.scrollY + 450;
+    navLinks.forEach(link => {
+        let sectionHash = document.querySelector(link.hash);
+        if (scrollPos === 0) navLinks[0].classList.add('active');
+        (scrollPos >= sectionHash.offsetTop && scrollPos <= (sectionHash.offsetTop + sectionHash.offsetHeight)) ? 
+            link.classList.add('active') : 
+            link.classList.remove('active');
+        if (scrollPos >= footer.offsetTop) navLinks[--navLinks.length].classList.add('active');
+    })
 }
+window.onload = () => activeLinkOnScroll();
+document.addEventListener('scroll', () => activeLinkOnScroll());
+navLinks.forEach(link => link.addEventListener('click', e => goTo(e)))
 heroImg.style.marginTop = `${header.offsetHeight}px`; // Hero img margin
