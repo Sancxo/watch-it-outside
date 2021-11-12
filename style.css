@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 body, html {
     height: 100%;
 }
-.hero-img {
+.jumbotron {
     background: center no-repeat url("./imgs/american-graffiti-lucas.jpg");
     background-size: cover;
     height: 100vh;
+    text-shadow: -1px 0#161616, 0 -1px #161616, 1px 0#161616, 0 1px #161616;
+}
+.overlay {
+    background-color: #16161675;
+}
+.jumbotron h1 {
+    font-family: 'Monoton', cursive;
+    word-spacing: 2rem;
 }
 
 .carousel-section {
@@ -28,8 +38,20 @@ body, html {
     height: 200px;
 }
 
+a[target="_blank"]:hover {
+    text-decoration: underline !important;
+}
+.social:nth-child(odd):hover {
+    transform: rotate(45deg);
+    transition: 250ms linear;
+}
+.social:nth-child(even):hover {
+    transform: rotate(-45deg);
+    transition: 250ms linear;
+}
+
 @media only screen and (max-device-width: 1200px) {
-    .hero-img {
+    .jumbotron {
         background-size: 100% 100%;
         height: calc(100vw / 2.35); /* we use the image height (ratio = 2.35) as section height */
     }

@@ -13,11 +13,11 @@
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-lg-5 px-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><strong>Watch it outside</strong> <br /><small>Boston edition</small></a>
-                <button class="navbar-toggler p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand order-sm-1" href="#"><strong>Watch it outside</strong> <br /><small>Boston edition</small></a>
+                <button class="navbar-toggler order-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-end order-sm-3" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-0">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
@@ -26,26 +26,39 @@
                         <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
                     </ul>
                 </div>
+                <p class="text-light flex-lg-grow-1 text-center order-sm-2">From 2021 August 5th to 8th</p>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero-img">
+    <!-- Jumbotron -->
+    <section id="home" class="jumbotron text-white">
+        <div class="text-center d-flex flex-column justify-content-center align-items-center overlay w-100 h-100">
+            <h1 class="display-1">Watch It Outside</h1>
+            <p>Boston Edition</p>
+            <p class="d-none d-sm-block display-6">From 2021 August 5th to 8th</p>
+        </div>
     </section>
 
-    <main class="my-4">
-        <section id="about" class="container-lg">
-            <p>The 'Watch it outside - Boston Edition' is an outdoor film festival organized by the 'Watch it outside events Co.' in <a> Boston Public Garden from August 5th through 8th, from 6pm to midnight.</p>
+    <main class="my-4 container-lg">
+        <section id="about">
+            <h2 class="border-start border-secondary border-5 px-3 mb-3">About Us</h2>
+            <p>The 'Watch it outside - Boston Edition' is an outdoor film festival organized by the 'Watch it outside events Co.' in <a href="https://www.boston.gov/parks/public-garden" target="_blank" rel="noopener" class="text-decoration-none">Boston Public Garden</a> from August 5th through 8th, from 6pm to midnight.</p>
             <p>Our main purpose is to select and to show films that can appeal to audiences of all ages, that's why shows are free and open to everyone. But in order to do that, you need to pre-register so that we're able to estimate how many people might come and so that we can close registration if it reaches the maximum venue’s capacity of 1,500 people.</p>
             <p>We can't wait to help you discover awesome films!</p>
         </section>
 
-        <section id="movies" class="carousel-section my-4">
-            <div id="movieCarousel" class="carousel slide vw-50" data-bs-ride="carousel">
+        <section id="movies" class="my-4">
+            <h2 class="border-start border-secondary border-5 px-3 mb-3">The Movies</h2>
+        </section>
+
+        <section id="news" class="my-4">
+            <h2 class="border-start border-secondary border-5 px-3 mb-3">News</h2>
+            <div id="newsCarousel" class="carousel slide vw-50" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                 <div class="carousel-item active" id="carousel-1">
@@ -73,21 +86,20 @@
                     </div>
                 </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
 
-        <section id="news" class="my-4"></section>
-
-        <section id="register" class="w-50 mx-auto">
-            <form method="post">
+        <section id="register">
+            <h2 class="border-start border-secondary border-5 px-3 mb-3">Registration</h2>
+            <form method="post" class="w-50 mx-auto">
                 <div class="row">
                     <div class="form-floating mb-3 col-lg">
                         <input type="text" class="form-control" id="name" placeholder="Truffaut">
@@ -127,10 +139,15 @@
         <div class="d-flex justify-content-around align-items-center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.4325389354753!2d-71.07297368481018!3d42.354620379187224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3709e822b60bb%3A0xcbd77f0b5e16e701!2sPublic%20Garden!5e0!3m2!1sfr!2sfr!4v1635973110805!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <div>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link link-light" href=""><i class="bi bi-twitter"></i></a></li>
-                    <li class="nav-item"><a class="nav-link link-light" href=""><i class="bi bi-facebook"></i></a></li>
-                    <li class="nav-item"><a class="nav-link link-light" href=""><i class="bi bi-instagram"></i></a></li>
+                <ul class="list-unstyled text-center">
+                    <li><a href="https://www.boston.com/category/news/" target="_blank" rel="noopener" class="link-light text-decoration-none">Boston City news</a></li>
+                    <li><a href="https://www.boston.gov/parks/public-garden" target="_blank" rel="noopener" class="link-light text-decoration-none">Boston Public Garden website</a></li>
+                </ul>
+                
+                <ul class="nav justify-content-center mt-3">
+                    <li class="nav-item social"><a class="nav-link link-light" href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a></li>
+                    <li class="nav-item social"><a class="nav-link link-light" href="https://twitter.com/" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a></li>
+                    <li class="nav-item social"><a class="nav-link link-light" href="https://www.instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
