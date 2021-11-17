@@ -10,6 +10,7 @@
     <title>🎬 Watch it outside - Boston edition</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-lg-5 px-3">
             <div class="container-fluid">
@@ -26,7 +27,7 @@
                         <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
                     </ul>
                 </div>
-                <p class="text-light flex-lg-grow-1 text-center order-sm-2">From 2021 August 5th to 8th</p>
+                <p class="text-light flex-lg-grow-1 text-center order-sm-2 mb-0">From 2021 August 5th to 8th</p>
             </div>
         </nav>
     </header>
@@ -41,6 +42,7 @@
     </section>
 
     <main class="my-4 container-lg">
+        <!-- About us -->
         <section id="about">
             <h2 class="border-start border-secondary border-5 px-3 mb-3">About Us</h2>
             <p>The 'Watch it outside - Boston Edition' is an outdoor film festival organized by the 'Watch it outside events Co.' in <a href="https://www.boston.gov/parks/public-garden" target="_blank" rel="noopener" class="text-decoration-none">Boston Public Garden</a> from August 5th through 8th, from 6pm to midnight.</p>
@@ -48,6 +50,7 @@
             <p>We can't wait to help you discover awesome films!</p>
         </section>
 
+        <!-- Movies -->
         <section id="movies" class="my-4">
             <h2 class="border-start border-secondary border-5 px-3 mb-3">The Movies</h2>
             <ul class="nav nav-tabs" id="movieTabs" role="tablist">
@@ -96,14 +99,135 @@
                     aria-selected="false">August 8th</button>
                 </li>
             </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="first-day" role="tabpanel" aria-labelledby="first-tab">1</div>
-                <div class="tab-pane fade" id="second-day" role="tabpanel" aria-labelledby="second-tab">2</div>
-                <div class="tab-pane fade" id="third-day" role="tabpanel" aria-labelledby="third-tab">3</div>
-                <div class="tab-pane fade" id="fourth-day" role="tabpanel" aria-labelledby="fourth-tab">4</div>
+            <div class="tab-content" id="tabContent">
+                <div class="tab-pane fade show active" id="first-day" role="tabpanel" aria-labelledby="first-tab">
+                    <div class="card-group">
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/Shadows.jpg" class="card-img-top h-100" alt="John Cassavetes' Shadows movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Shadows - John Cassavetes</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 5th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/sunset_boulevard.jpg" class="card-img-top h-100" alt="Billy Wilder's Sunset Boulevard movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Sunset Boulevard - Billy Wilder</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 5th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/mean_streets.jpg" class="card-img-top h-100" alt="Martin Scorcese's Mean Streets movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Mean Streets - Martin Scorcese</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 5th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="second-day" role="tabpanel" aria-labelledby="second-tab">
+                    <div class="card-group">
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/profundo_rosso.jpg" class="card-img-top h-100" alt="Dario Argento's Deep Red movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Deep Red - Dario Argento</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 6th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/santa_sangre.jpg" class="card-img-top h-100" alt="Alejandro Jodorowsky's Santa Sangre movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Santa Sangre - Alejandro Jodorowsky</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 6th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/driller_killer.jpg" class="card-img-top h-100" alt="Abel Ferrara's Driller Killer movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Driller Killer - Abel Ferrara</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 6th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="third-day" role="tabpanel" aria-labelledby="third-tab">
+                    <div class="card-group">
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/dead_man.jpg" class="card-img-top h-100" alt="Jim Jarmusch's Dead Man movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Dead Man - Jim Jarmusch</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 7th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/el_topo.jpg" class="card-img-top h-100" alt="Alejandro Jodorowsky's El Topo movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">El Topo - Alejandro Jodorowsky</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 7th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/the_great_silence.jpg" class="card-img-top h-100" alt="Sergio Corbucci's The Great Silence movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">The Great Silence - Sergio Corbucci</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 7th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="fourth-day" role="tabpanel" aria-labelledby="fourth-tab">
+                    <div class="card-group">
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/psycho.jpg" class="card-img-top h-100" alt="Alfred Hitchcock's Psycho movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Psycho - Alfred Hitchcock</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 8th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/raising_cain.webp" class="card-img-top h-100" alt="Brian de Palma's Raising Cain movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Raising Cain - Brian de Palma</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 8th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                        <div class="card mb-3 text-center" style="max-width: 540px;">
+                            <img src="./imgs/movie posters/spider.jpg" class="card-img-top h-100" alt="David Cronenberg's Spider movie poster">
+                            <div class="card-body">
+                                <h5 class="card-title">Spider - David Cronenberg</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 8th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- News -->
         <section id="news" class="my-4">
             <h2 class="border-start border-secondary border-5 px-3 mb-3">News</h2>
             <div id="newsCarousel" class="carousel slide vw-50" data-bs-ride="carousel">
@@ -205,6 +329,7 @@
         </div>
     </footer>
 
+    <img id="arrow-up" src="./imgs/arrow_up.png" alt="Go on top of the page" onclick="goTop()">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>

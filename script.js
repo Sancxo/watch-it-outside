@@ -4,6 +4,7 @@ const header = document.querySelector('header');
 const navLinks = document.querySelectorAll(".navbar .nav-link");
 const heroImg = document.querySelector('.jumbotron');
 const footer = document.querySelector('footer');
+const arrowUp = document.querySelector('#arrow-up');
 
 // Style :
 heroImg.style.marginTop = `${header.offsetHeight}px`; // Hero img margin
@@ -25,10 +26,7 @@ const activeLinkOnScroll = () => { // when we scroll over a section, the link in
             navLinks[0].classList.add('active') : 
             navLinks[0].classList.remove('active');
 
-   
-
     navLinks.forEach(link => {
-
         let sectionHash = document.querySelector(link.hash);
 
         (scrollPos >= sectionHash.offsetTop && scrollPos <= (sectionHash.offsetTop + sectionHash.offsetHeight)) ? 
@@ -42,8 +40,13 @@ const activeLinkOnScroll = () => { // when we scroll over a section, the link in
     } else
         navLinks[--navLinks.length].classList.remove('active');
 }
+const displayArrowUp = () => {
+    if(window.scrollY <= 100) arrowUp.style.display = 'none';
+    else if (window.scrollY > 100) arrowUp.style.display = 'block';
+}
+const goTop = () => window.scrollTo({top: 0, behavior: "smooth"});
 
 // Event listeners :
 window.onload = () => activeLinkOnScroll();
-document.addEventListener('scroll', () => activeLinkOnScroll());
-navLinks.forEach(link => link.addEventListener('click', e => goTo(e)))
+document.addEventListener('scroll', () => {activeLinkOnScroll(); displayArrowUp()});
+navLinks.forEach(link => link.addEventListener('click', e => goTo(e)));

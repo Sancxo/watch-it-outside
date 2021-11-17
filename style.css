@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-body, html {
-    height: 100%;
-}
+body, html { height: 100%; }
 .jumbotron {
     background: center no-repeat url("./imgs/american-graffiti-lucas.jpg");
     background-size: cover;
     height: 100vh;
     text-shadow: -1px 0#161616, 0 -1px #161616, 1px 0#161616, 0 1px #161616;
 }
-.overlay {
-    background-color: #16161675;
-}
+.overlay { background-color: #16161675; }
 .jumbotron h1 {
     font-family: 'Monoton', cursive;
     word-spacing: 2rem;
@@ -21,33 +17,37 @@ body, html {
     width: 66vw;
     margin: auto;
 }
-#carousel-1 {
-    background: center / cover no-repeat url("./imgs/shadows-cassavetes.jpg");
-    height: 75vh;
+#carousel-1 { background: center / cover no-repeat url("./imgs/shadows-cassavetes.jpg"); }
+#carousel-2 { background: right / cover no-repeat url("./imgs/sunset-boulevard-wilder.jpg"); }
+#carousel-3 { background: center / cover no-repeat url("./imgs/meanstreets-scorcese.webp"); }
+#carousel-1, #carousel-2, #carousel-3 { height: 75vh; }
+
+#message { height: 200px; }
+
+a[target="_blank"]:hover { text-decoration: underline !important; }
+
+.social:nth-child(odd):hover { transform: rotate(45deg); }
+.social:nth-child(even):hover { transform: rotate(-45deg); }
+.social:hover { transition: 250ms linear; }
+
+#arrow-up {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
 }
-#carousel-2 {
-    background: right / cover no-repeat url("./imgs/sunset-boulevard-wilder.jpg");
-    height: 75vh;
-}
-#carousel-3 {
-    background: center / cover no-repeat url("./imgs/meanstreets-scorcese.webp");
-    height: 75vh;
+#arrow-up:hover {
+    cursor: pointer;
+    /* transform: scale(1.10);
+    transition: 250ms 500ms ease-out; */
+    animation: shake 375ms ease-in-out;
 }
 
-#message {
-    height: 200px;
-}
-
-a[target="_blank"]:hover {
-    text-decoration: underline !important;
-}
-.social:nth-child(odd):hover {
-    transform: rotate(45deg);
-    transition: 250ms linear;
-}
-.social:nth-child(even):hover {
-    transform: rotate(-45deg);
-    transition: 250ms linear;
+@keyframes shake {
+    25% {transform: rotate(10deg)}
+    50% {transform: rotate(-10deg);}
+    75% {transform: rotate(10deg);}
+    100% {transform: rotate(-10deg)}
 }
 
 @media only screen and (max-device-width: 1200px) {
