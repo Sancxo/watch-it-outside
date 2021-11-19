@@ -27,7 +27,7 @@
                         <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
                     </ul>
                 </div>
-                <p class="text-light flex-lg-grow-1 text-center order-sm-2 mb-0">From 2021 August 5th to 8th</p>
+                <p class="text-light flex-lg-grow-1 text-center order-sm-2 mb-0">From 2022 August 5th to 8th</p>
             </div>
         </nav>
     </header>
@@ -37,7 +37,7 @@
         <div class="text-center d-flex flex-column justify-content-center align-items-center overlay w-100 h-100">
             <h1 class="display-1">Watch It Outside</h1>
             <p>Boston Edition</p>
-            <p class="d-none d-sm-block display-6">From 2021 August 5th to 8th</p>
+            <p class="d-none d-sm-block display-6">From 2022 August 5th to 8th</p>
         </div>
     </section>
 
@@ -53,6 +53,7 @@
         <!-- Movies -->
         <section id="movies" class="my-4">
             <h2 class="border-start border-secondary border-5 px-3 mb-3">The Movies</h2>
+            <!-- Movie Tabs -->
             <ul class="nav nav-tabs" id="movieTabs" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button 
@@ -99,7 +100,9 @@
                     aria-selected="false">August 8th</button>
                 </li>
             </ul>
+            <!-- Movie Tabs Content -->
             <div class="tab-content" id="tabContent">
+                <!-- First Day -->
                 <div class="tab-pane fade show active" id="first-day" role="tabpanel" aria-labelledby="first-tab">
                     <div class="card-group">
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -107,8 +110,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Shadows - John Cassavetes</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 5th - 6 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 5th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-05', '6')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -116,8 +119,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Sunset Boulevard - Billy Wilder</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 5th - 8 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 5th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-05', '8')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -125,12 +128,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">Mean Streets - Martin Scorcese</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 5th - 10 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 5th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-05', '10')">Book now !</button></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Second Day -->
                 <div class="tab-pane fade" id="second-day" role="tabpanel" aria-labelledby="second-tab">
                     <div class="card-group">
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -138,8 +142,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Deep Red - Dario Argento</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 6th - 6 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 6th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-06', '6')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -147,8 +151,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Santa Sangre - Alejandro Jodorowsky</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 6th - 8 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 6th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-06', '8')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -156,12 +160,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">Driller Killer - Abel Ferrara</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 6th - 10 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 6th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-06', '10')">Book now !</button></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Third Day -->
                 <div class="tab-pane fade" id="third-day" role="tabpanel" aria-labelledby="third-tab">
                     <div class="card-group">
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -169,8 +174,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Dead Man - Jim Jarmusch</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 7th - 6 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 7th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-07', '6')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -178,8 +183,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">El Topo - Alejandro Jodorowsky</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 7th - 8 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 7th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-07', '8')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -187,12 +192,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">The Great Silence - Sergio Corbucci</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 7th - 10 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 7th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-07', '10')">Book now !</button></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Fourth Day -->
                 <div class="tab-pane fade" id="fourth-day" role="tabpanel" aria-labelledby="fourth-tab">
                     <div class="card-group">
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -200,8 +206,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Psycho - Alfred Hitchcock</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 8th - 6 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 8th - 6 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-08', '6')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -209,8 +215,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Raising Cain - Brian de Palma</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 8th - 8 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 8th - 8 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-08', '8')">Book now !</button></div>
                             </div>
                         </div>
                         <div class="card mb-3 text-center" style="max-width: 540px;">
@@ -218,8 +224,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Spider - David Cronenberg</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2021 August 8th - 10 p.m.</small></p>
-                                <div><button class="btn btn-primary text-center">Book now !</button></div>
+                                <p class="card-text fw-bold"><small class="text-muted">Screening on 2022 August 8th - 10 p.m.</small></p>
+                                <div><button class="btn btn-primary text-center" type="button" onclick="bookScreen('2022-08-08', '10')">Book now !</button></div>
                             </div>
                         </div>
                     </div>
@@ -302,14 +308,15 @@
                 <!-- Date + Film -->
                 <div class="row">
                     <div class="form-floating mb-3 col-lg">
-                        <input type="date" name="date" id="date" class="form-control" min="2022-08-05" max="2022-08-08"
-                        value='2022-08-05'>
-                        <label for="date" class="ms-2" required>Date *</label>
+                        <input type="date" name="date" id="date-input" class="form-control" min="2022-08-05" max="2022-08-08"
+                        value='2022-08-05' required>
+                        <label for="date-input" class="ms-2">Date *</label>
                     </div>
                     <div class="form-floating mb-3 col-lg">
-                        <input type="phone" class="form-control" id="phone" placeholder="451-451-4511">
-                        <label for="phone" class="ms-2">Phone number</label>
-                    </div>
+                        <select class="form-select" id="movie-select" aria-label="Movie select input" required>             
+                        </select>
+                        <label for="movie-select"  class="ms-2">Select your screening time *</label>
+                      </div>
                 </div>
                 <!-- Message -->
                 <div class="form-floating">
