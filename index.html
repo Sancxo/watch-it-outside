@@ -273,9 +273,11 @@
             </div>
         </section>
 
+        <!-- Register Form -->
         <section id="register">
             <h2 class="border-start border-secondary border-5 px-3 mb-3">Registration</h2>
             <form method="post" class="w-50 mx-auto">
+                <!-- Name + Firstname -->
                 <div class="row">
                     <div class="form-floating mb-3 col-lg">
                         <input type="text" class="form-control" id="name" placeholder="Truffaut">
@@ -289,8 +291,20 @@
                 <!-- Email + Phone -->
                 <div class="row">
                     <div class="form-floating mb-3 col-lg">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Francois@Truffaut.com" required>
-                        <label for="floatingInput" class="ms-2">Email address *</label>
+                        <input type="email" class="form-control" id="email" placeholder="Francois@Truffaut.com" required>
+                        <label for="email" class="ms-2">Email address *</label>
+                    </div>
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="phone" class="form-control" id="phone" placeholder="451-451-4511">
+                        <label for="phone" class="ms-2">Phone number</label>
+                    </div>
+                </div>
+                <!-- Date + Film -->
+                <div class="row">
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="date" name="date" id="date" class="form-control" min="2022-08-05" max="2022-08-08"
+                        value='2022-08-05'>
+                        <label for="date" class="ms-2" required>Date *</label>
                     </div>
                     <div class="form-floating mb-3 col-lg">
                         <input type="phone" class="form-control" id="phone" placeholder="451-451-4511">
@@ -299,8 +313,8 @@
                 </div>
                 <!-- Message -->
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave your message here" id="message" required></textarea>
-                    <label for="message">Message *</label>
+                    <textarea class="form-control" placeholder="Leave your message here" id="message"></textarea>
+                    <label for="message">Message</label>
                 </div>
                 <!-- Buttons -->
                 <div class="text-center mt-2">
