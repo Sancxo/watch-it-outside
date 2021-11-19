@@ -3,6 +3,7 @@ const rootFontSize = parseInt(window.getComputedStyle(document.documentElement).
 const header = document.querySelector('header');
 const navLinks = document.querySelectorAll(".navbar .nav-link");
 const heroImg = document.querySelector('.jumbotron');
+const inputRowContainer = document.querySelector('#row-container');
 const dateInput = document.querySelector('#date-input');
 const movieSelect = document.querySelector('#movie-select');
 const footer = document.querySelector('footer');
@@ -88,9 +89,87 @@ const bookScreen = (date, time) => {
     let selectNewMovie = movieSelect.querySelector(`option[value='${time}']`);
     selectNewMovie.setAttribute('selected', 'true');
 }
+const addAnotherShow = () => {
+    let formInputs = [
+        {
+            'input': {
+                'class': 'form-control',
+                'type': 'date', 
+                'id': 'date-input', 
+                'name': 'date', 
+                'min': '2022-08-05', 
+                'max': '2022-08-08', 
+                'value': '2022-08-05', 
+                'required': 'true'
+            },
+            'label': {'for': 'date-input', 'class': 'ms-2'}
+        },
+        {
+            'select': {
+                'class': 'form-select',
+                'id': 'movie-select', 
+                'name': 'show',
+                'aria-label': 'Movie select input',
+                'required': 'true'
+            },
+            'label': {'for': 'movie-select', 'class': 'ms-2'}
+        },
+        {
+            'input': {
+                'class': 'form-control',
+                'type': 'number',
+                'id': 'number-input',
+                'name': 'number',
+                'min': '1',
+                'value': '1',
+                'required': 'true'
+            },
+            'label': {'for': 'number-input', 'class': 'ms-2'}
+        }
+    ]
+
+    let elementList = [];
+
+
+    for (const {element, attributes} of formInputs) {
+        console.log(attributes);
+        console.log(object[attributes]);
+
+        let htmlElement = document.createElement(element);
+        for (const {name, value} in attributes) {
+            htmlElement.setAttribute(name, value);
+        }
+        elementList.push(htmlElement);
+    }
+
+    let divInputList = []
+
+    for (let i = 0; i < 3; i++) {
+        let divInputCtn = document.createElement('div');
+        divInputCtn.classList.add('form-floating', 'mb-3', 'col-lg');
+        
+    //    let input = document.createElement('input');
+    //    input.classList.add = 'form-control';
+    //    input.setAttribute('required', 'true');
+
+    //    let label = document.createElement('label');
+    //    label.classList.add = 'ms-2';
+
+        elementList.forEach(element => divInputCtn.appendChild(element));
+
+        divInputList.push(divInputCtn);
+    }
+
+    let divRow = document.createElement('div');
+    divRow.classList.add('row');
+
+    divInputList.forEach(element => divRow.appendChild(element));
+
+    inputRowContainer.appendChild(divRow);
+}
 
 // Event listeners :
-window.onload = () => {activeLinkOnScroll(), addMovieSelectOptions('2022-08-05')};
+window.onload = () => {activeLinkOnScroll(); addAnotherShow(); dateInput.value="2022-08-05"; addMovieSelectOptions(dateInput.value)};
 document.addEventListener('scroll', () => {activeLinkOnScroll(); displayArrowUp()});
 navLinks.forEach(link => link.addEventListener('click', e => goTo(e)));
 dateInput.addEventListener('change', () => addMovieSelectOptions(dateInput.value))

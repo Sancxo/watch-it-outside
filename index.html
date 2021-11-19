@@ -282,51 +282,46 @@
         <!-- Register Form -->
         <section id="register">
             <h2 class="border-start border-secondary border-5 px-3 mb-3">Registration</h2>
-            <form method="post" class="w-50 mx-auto">
-                <!-- Name + Firstname -->
-                <div class="row">
-                    <div class="form-floating mb-3 col-lg">
-                        <input type="text" class="form-control" id="name" placeholder="Truffaut">
-                        <label for="name" class="ms-2">Name</label>
-                    </div>
-                    <div class="form-floating mb-3 col-lg">
-                        <input type="text" class="form-control" id="forename" placeholder="François">
-                        <label for="forename" class="ms-2">Forename</label>
-                    </div>
-                </div>
-                <!-- Email + Phone -->
-                <div class="row">
-                    <div class="form-floating mb-3 col-lg">
-                        <input type="email" class="form-control" id="email" placeholder="Francois@Truffaut.com" required>
-                        <label for="email" class="ms-2">Email address *</label>
-                    </div>
-                    <div class="form-floating mb-3 col-lg">
-                        <input type="phone" class="form-control" id="phone" placeholder="451-451-4511">
-                        <label for="phone" class="ms-2">Phone number</label>
+            <form method="post" class="w-75 mx-auto">
+                <div id="row-container">
+                    <!-- Name + Firstname + Email -->
+                    <div class="row">
+                        <div class="form-floating mb-3 col-lg">
+                            <input type="text" class="form-control" id="name-input" name="name" placeholder="Truffaut">
+                            <label for="name-input" class="ms-2">Name</label>
+                        </div>
+                        <div class="form-floating mb-3 col-lg">
+                            <input type="text" class="form-control" id="forename-input" name="forename" placeholder="François">
+                            <label for="forename-input" class="ms-2">Forename</label>
+                        </div>
+                        <div class="form-floating mb-3 col-lg">
+                            <input type="email" class="form-control" id="email-input" name="email" placeholder="Francois@Truffaut.com" required>
+                            <label for="email-input" class="ms-2">Email address *</label>
+                        </div>
                     </div>
                 </div>
-                <!-- Date + Film -->
-                <div class="row">
+                
+                <!-- Date + Film + Number of Seats -->
+                <!-- <div class="row">
                     <div class="form-floating mb-3 col-lg">
-                        <input type="date" name="date" id="date-input" class="form-control" min="2022-08-05" max="2022-08-08"
+                        <input type="date" id="date-input" name="date" class="form-control" min="2022-08-05" max="2022-08-08"
                         value='2022-08-05' required>
                         <label for="date-input" class="ms-2">Date *</label>
                     </div>
                     <div class="form-floating mb-3 col-lg">
-                        <select class="form-select" id="movie-select" aria-label="Movie select input" required>             
-                        </select>
+                        <select class="form-select" id="movie-select" name="show" aria-label="Movie select input" required></select>
                         <label for="movie-select"  class="ms-2">Select your screening time *</label>
-                      </div>
-                </div>
-                <!-- Message -->
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave your message here" id="message"></textarea>
-                    <label for="message">Message</label>
-                </div>
+                    </div>
+                    <div class="form-floating mb-3 col-lg">
+                        <input type="number" class="form-control" id="number-input" name="number" placeholder="1" min="1" value="1" required>
+                        <label for="number-input" class="ms-2">Number of seats *</label>
+                    </div>
+                </div> -->
+                <div class="text-center py-1"><a class="link-primary my-3" onclick="addAnotherShow()">Add another show</a></div>
                 <!-- Buttons -->
-                <div class="text-center mt-2">
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                    <input class="btn btn-dark" type="reset" value="Reset">
+                <div class="text-center mt-3">
+                    <input class="btn btn-primary mx-5" type="submit" value="Submit">
+                    <input class="btn btn-dark mx-5" type="reset" value="Reset">
                 </div>
             </form>
         </section>
