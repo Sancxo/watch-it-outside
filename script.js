@@ -89,6 +89,9 @@ const bookScreen = (date, time) => {
     let selectNewMovie = movieSelect.querySelector(`option[value='${time}']`);
     selectNewMovie.setAttribute('selected', 'true');
 }
+
+// work in progress function to add a new line in the form to book another show
+/* 
 const addAnotherShow = () => {
     let counter = 1;
     counter ++;
@@ -177,13 +180,8 @@ const addAnotherShow = () => {
 
     // On append la div.row à son container
     inputRowContainer.appendChild(divRow);
-}
-//    let input = document.createElement('input');
-//    input.classList.add = 'form-control';
-//    input.setAttribute('required', 'true');
-
-//    let label = document.createElement('label');
-//    label.classList.add = 'ms-2';
+} 
+*/
 
 // Event listeners :
 window.onload = () => {activeLinkOnScroll(); dateInput.value="2022-08-05"; addMovieSelectOptions(dateInput.value)};
