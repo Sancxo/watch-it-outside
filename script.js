@@ -90,86 +90,103 @@ const bookScreen = (date, time) => {
     selectNewMovie.setAttribute('selected', 'true');
 }
 const addAnotherShow = () => {
-    let formInputs = [
-        {
+    let counter = 1;
+    counter ++;
+    let formInputs = {
+        0: {
             'input': {
                 'class': 'form-control',
                 'type': 'date', 
-                'id': 'date-input', 
+                'id': 'date-input' + counter, 
                 'name': 'date', 
                 'min': '2022-08-05', 
                 'max': '2022-08-08', 
                 'value': '2022-08-05', 
                 'required': 'true'
             },
-            'label': {'for': 'date-input', 'class': 'ms-2'}
+            'label': {'for': 'date-input' + counter, 'class': 'ms-2'}
         },
-        {
+        1: {
             'select': {
                 'class': 'form-select',
-                'id': 'movie-select', 
+                'id': 'movie-select' + counter, 
                 'name': 'show',
                 'aria-label': 'Movie select input',
                 'required': 'true'
             },
-            'label': {'for': 'movie-select', 'class': 'ms-2'}
+            'label': {'for': 'movie-select' + counter, 'class': 'ms-2'}
         },
-        {
+        2: {
             'input': {
                 'class': 'form-control',
                 'type': 'number',
-                'id': 'number-input',
+                'id': 'number-input' + counter,
                 'name': 'number',
                 'min': '1',
                 'value': '1',
                 'required': 'true'
             },
-            'label': {'for': 'number-input', 'class': 'ms-2'}
+            'label': {'for': 'number-input' + counter, 'class': 'ms-2'}
         }
-    ]
-
-    let elementList = [];
-
-
-    for (const {element, attributes} of formInputs) {
-        console.log(attributes);
-        console.log(object[attributes]);
-
-        let htmlElement = document.createElement(element);
-        for (const {name, value} in attributes) {
-            htmlElement.setAttribute(name, value);
-        }
-        elementList.push(htmlElement);
     }
 
     let divInputList = []
 
+    // 3 fois :
     for (let i = 0; i < 3; i++) {
+
+        // On créé une div.form-floating
         let divInputCtn = document.createElement('div');
         divInputCtn.classList.add('form-floating', 'mb-3', 'col-lg');
-        
-    //    let input = document.createElement('input');
-    //    input.classList.add = 'form-control';
-    //    input.setAttribute('required', 'true');
 
-    //    let label = document.createElement('label');
-    //    label.classList.add = 'ms-2';
+        let elementList = [];
 
-        elementList.forEach(element => divInputCtn.appendChild(element));
+        for (const [index, element] of Object.entries(formInputs)) {
+            let inputAndLabel = [];
+            for (const [elementName, attributes] of Object.entries(element)) {
+                
+                let htmlElement = document.createElement(elementName);
+                for (const [attributeName, value] of Object.entries(attributes)) {
+                    htmlElement.setAttribute(attributeName, value);
+                }
+                inputAndLabel.push(htmlElement);
+            }
+            elementList.push(inputAndLabel);
+        }
 
+        // On append à la div.form-floating les 3 inputs contenus dans la liste d'input
+        //elementList.forEach(element => divInputCtn.appendChild(element));
+        elementList.forEach((list, index) => {
+            index === i ? list.forEach(element => {
+                divInputCtn.appendChild(element);
+            }) : null;
+        })
+        // On veut append à 3 div.form-floating chacun des 3 inputs et des 3 labels contenu dans la liste
+         
+
+        // on pousse la div.form-floating dans une liste de div
         divInputList.push(divInputCtn);
     }
 
+    // On créé la div.row
     let divRow = document.createElement('div');
     divRow.classList.add('row');
 
+    // On lui append les 3 div.form-floating
     divInputList.forEach(element => divRow.appendChild(element));
 
+    // On append la div.row à son container
     inputRowContainer.appendChild(divRow);
 }
+//    let input = document.createElement('input');
+//    input.classList.add = 'form-control';
+//    input.setAttribute('required', 'true');
+
+//    let label = document.createElement('label');
+//    label.classList.add = 'ms-2';
 
 // Event listeners :
-window.onload = () => {activeLinkOnScroll(); addAnotherShow(); dateInput.value="2022-08-05"; addMovieSelectOptions(dateInput.value)};
+window.onload = () => {activeLinkOnScroll(); dateInput.value="2022-08-05"; addMovieSelectOptions(dateInput.value)};
 document.addEventListener('scroll', () => {activeLinkOnScroll(); displayArrowUp()});
 navLinks.forEach(link => link.addEventListener('click', e => goTo(e)));
 dateInput.addEventListener('change', () => addMovieSelectOptions(dateInput.value))
